@@ -36,7 +36,7 @@ public class login_metis_Runner {
 
     @RunWith(CucumberWithSerenity.class)
     @CucumberOptions(features = "src/test/resources/features/login_metis.feature",
-                    tags = "@LoginExitoso",
+                    tags = "@LoginExitoso2",
                     glue = "co.com.metis.definitions",
                     snippets = SnippetType.CAMELCASE)
 

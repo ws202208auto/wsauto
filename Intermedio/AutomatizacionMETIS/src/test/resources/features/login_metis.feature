@@ -6,7 +6,8 @@ Característica: Acceder al aplicativo METIS
   Para tener acceso a la App
 
   @LoginExitoso
-  Escenario: : Login Exitoso En Metis
-  Dado que Yeison quiere ingresar a Metis
-  Cuando  el escribe el usuario ejercicio y la clave ejercicio
-  Entonces el ve el mensaje Bootstrap-Admin-Template
+  Escenario: Login Exitoso En Metis
+    Dado que Yeison quiere ingresar a Metis
+    Cuando  el escribe el usuario ejercicio y la clave ejercicio
+    Entonces el ve el mensaje Bootstrap-Admin-Template
+
