@@ -11,10 +11,13 @@ public class LoginMetisSteps {
         loginMetisPage.open();
     }
     @Step
-    public void realizarLaAutenticacion() {
+    public void realizarLaAutenticacion(String usuario, String password) {
+        loginMetisPage.autenticarme(usuario,password);
     }
 
     @Step
-    public void verificarElAccesoExitoso() {
+    public void verificarElAccesoExitoso(String titulo) {
+        loginMetisPage.verificarTitulo(titulo);
     }
+
 }

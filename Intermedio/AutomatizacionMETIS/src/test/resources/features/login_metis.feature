@@ -8,6 +8,6 @@ Característica: Acceder al aplicativo METIS
   @LoginExitoso
   Escenario: Login Exitoso En Metis
     Dado que Yeison quiere ingresar a Metis
-    Cuando  el escribe el usuario ejercicio y la clave ejercicio
+    Cuando  el escribe el usuario papa y la clave padadasfsddfsdfsdf*
     Entonces el ve el mensaje Bootstrap-Admin-Template
 
