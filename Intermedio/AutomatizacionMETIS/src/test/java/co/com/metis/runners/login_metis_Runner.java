@@ -1,4 +1,4 @@
-package co.com.metis;
+package co.com.metis.runners;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
