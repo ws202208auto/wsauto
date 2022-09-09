@@ -30,4 +30,19 @@ public class LoginAutomationDemoDefinition {
     public void elVerificaElMensajeDeLogin(String mensaje) {
         loginAutomationDemoSteps.verificarMensaje(mensaje);
     }
+
+
+    @Cuando("^el escribe las credenciales de acceso$")
+    public void elEscribeLasCredencialesDeAcceso(DataTable data) {
+        List<List<String>> data2 = data.asLists(String.class);
+        loginAutomationDemoSteps.login(data2.get(1));
+    }
+
+    @Entonces("^el verifica el mensaje de login$")
+    public void elVerificaElMensajeDeLogin(DataTable data) {
+        List<List<String>> data3 = data.asLists(String.class);
+        loginAutomationDemoSteps.verificarMensajeMultiples(data3.get(1));
+
+    }
+
 }

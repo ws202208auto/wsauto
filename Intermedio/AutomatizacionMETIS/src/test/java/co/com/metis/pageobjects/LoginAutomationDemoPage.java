@@ -25,6 +25,9 @@ public class LoginAutomationDemoPage extends PageObject {
     @FindBy(css = "#page-36 > div > div.woocommerce > div > p:nth-child(1)")
     WebElementFacade LBL_HELLO;
 
+    @FindBy(css="#page-36 > div > div.woocommerce > ul > li")
+    WebElementFacade LBL_ERROR;
+
     public void loginEnLaPagina(List<String> data) {
         TXT_USER.clear();
         TXT_USER.sendKeys(data.get(USUARIO));
@@ -34,5 +37,9 @@ public class LoginAutomationDemoPage extends PageObject {
 
     public void mensajeExitoso(String mensaje) {
         assertThat(LBL_HELLO.getText(),containsText(mensaje));
+    }
+
+    public void verificar(List<String> mensaje) {
+        assertThat(LBL_ERROR.getText(),containsText(mensaje.get(0)));
     }
 }

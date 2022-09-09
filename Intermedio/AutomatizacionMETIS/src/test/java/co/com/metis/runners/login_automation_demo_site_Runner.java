@@ -36,7 +36,7 @@ public class login_automation_demo_site_Runner {
 
     @RunWith(CucumberWithSerenity.class)
     @CucumberOptions(features = "src/test/resources/features/login_automation_demo_site.feature",
-                    tags = "@LoginExitosoDataDriven",
+                    tags = "@LoginFallidoOutLine",
                     glue = "co.com.metis.definitions",
                     snippets = SnippetType.CAMELCASE)
 
