@@ -22,11 +22,12 @@ ext{
     serenityCucumber = '1.9.39'
     jUnit = '4.12'
     webdrivermanager = '3.8.1'
+    poi = '3.17'
 }
 
 dependencies {
-    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
-    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    implementation group: 'org.apache.poi', name: 'poi', version: "$rootProject.ext.poi"
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: "$rootProject.ext.poi"
     implementation group: 'net.serenity-bdd', name: 'serenity-core', version: "$rootProject.ext.serenityversion"
     implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: "$rootProject.ext.serenityversion"
     testImplementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: "$rootProject.ext.serenityCucumber"

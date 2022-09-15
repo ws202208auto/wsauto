@@ -13,6 +13,8 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
+import static co.com.katalontest.utils.datatofeature.DataToFeature.*;
+
 //@RunWith(RunnerPersonalizado.class)
 //@RunWith(CucumberWithSerenity.class)
 public class DiligenciarFormularioKatalonTestRunnerDtF {
@@ -35,7 +37,7 @@ public class DiligenciarFormularioKatalonTestRunnerDtF {
                 break;
         }
         //actualizacion de datos en features
-        DataToFeature.overrideFeatureFiles("./src/test/resources/features/diligenciar_formulario_katalontest.feature");
+        overrideFeatureFiles("./src/test/resources/features/diligenciar_formulario_katalontest.feature");
     }
 
     @Test
