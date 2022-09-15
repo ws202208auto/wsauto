@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Realizar un pago a traves de la App Eribank" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-15T02:53:52" hostname="CHMEPFQG7HL3" time="19.136">
+<testsuite name="Realizar un pago a traves de la App Eribank" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-09-15T03:25:58" hostname="CHMEPFQG7HL3" time="109.884">
   <properties/>
-  <testcase name="Pago Exitoso en la App Eribank" classname="Realizar un pago a traves de la App Eribank" time="19.136"/>
+  <testcase name="Pago Exitoso en la App Eribank" classname="Realizar un pago a traves de la App Eribank" time="109.884">
+    <failure message="org.openqa.selenium.NoSuchElementException: Timed out after 50 seconds. Element not found&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'CHMEPFQG7HL3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Timed out after 50 seconds. Element not found
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CHMEPFQG7HL3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:166)
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:118)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy33.getText(Unknown Source)
+	at co.com.eribank.pageobjects.LoginEribankAppPage.verificarAccesoExitoso(LoginEribankAppPage.java:40)
+	at co.com.eribank.steps.LoginEribankAppSteps.verificarAcceso(LoginEribankAppSteps.java:20)
+	at co.com.eribank.steps.LoginEribankAppSteps$ByteBuddy$Xx1ArFbW.verificarAcceso$accessor$1GYpM1Jk(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
+	at co.com.eribank.steps.LoginEribankAppSteps$ByteBuddy$Xx1ArFbW.verificarAcceso(Unknown Source)
+	at co.com.eribank.definitions.LoginEribankAppDefinition.elVeElMensajeYourBalanceIs(LoginEribankAppDefinition.java:26)
+	at ✽.el ve el mensaje Your balance is(src/test/resources/features/make_payment_eribank.feature:16)
+</failure>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Sep 14, 2022 9:54:00 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
-INFO: Detected dialect: W3C
-[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+  <system-err><![CDATA[Sep 14, 2022 10:26:06 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: OSS
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Pago Exitoso en la App Eribank
-----------------------------------------------------------------------------
+TEST FAILED WITH ERROR: Pago Exitoso en la App Eribank
+---------------------------------------------------------------------
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Verificar acceso: Your balance is
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Timed out after 50 seconds. Element not found
 ]]></system-err>
 </testsuite>

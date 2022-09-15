@@ -1,8 +1,10 @@
 package co.com.eribank.pageobjects;
 
 import co.com.eribank.utils.MobilePageObject;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.hamcrest.MatcherAssert;
+import net.serenitybdd.core.Serenity;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -25,7 +27,10 @@ public class LoginEribankAppPage extends MobilePageObject {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View")
     WebElement LBL_MENSAJE;
 
+    By loc_acceptAlert = MobileBy.ByAndroidUIAutomator.AndroidUIAutomator("new UiSelector().text(\"OK\")");
+    //WebElement BTN_YES;
     public void realizarAutenticacion(String usuario, String clave) {
+        if (!Serenity.getWebdriverManager().getCurrentDriver().findElements(loc_acceptAlert).isEmpty()) Serenity.getWebdriverManager().getCurrentDriver().findElement(loc_acceptAlert).click();
         TXT_USAURIO.sendKeys(usuario);
         TXT_CLAVE.sendKeys(clave);
         BTN_LOGIN.click();

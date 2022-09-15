@@ -1,11 +1,7 @@
 package co.com.eribank.pageobjects;
 
 import co.com.eribank.utils.MobilePageObject;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import net.serenitybdd.core.Serenity;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
