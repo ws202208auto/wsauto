@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ingreso a la App Eribank" skipped="0" tests="1" time="14.0" timestamp="2022-09-14 07:02:01"><testcase name="Logueo exitoso en la App Eribank"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Ingreso a la App Eribank" skipped="0" tests="1" time="119.52" timestamp="2022-09-15 05:23:40"><testcase name="Logueo exitoso en la App Eribank"><failure message="The page object class co.com.eribank.pageobjects.LoginEribankAppPage looks dodgy:&#10;Failed to instantiate page (net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver)" type="net.thucydides.core.pages.WrongPageError">The page object class co.com.eribank.pageobjects.LoginEribankAppPage looks dodgy:
+Failed to instantiate page (net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver)</failure><system-err>The page object class co.com.eribank.pageobjects.LoginEribankAppPage looks dodgy:
+Failed to instantiate page (net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class io.appium.java_client.AppiumDriver)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+✽.que Yeison quiere ingresar a Eribank(src/test/resources/features/login_eribak_app.feature:10)&#13;
+</system-err></testcase></testsuite>

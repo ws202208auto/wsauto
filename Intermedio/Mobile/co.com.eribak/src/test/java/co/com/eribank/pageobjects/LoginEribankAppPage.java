@@ -38,7 +38,6 @@ public class LoginEribankAppPage extends MobilePageObject {
 
     public void verificarAccesoExitoso(String mensaje) {
         String mensaje_pantalla = LBL_MENSAJE.getText();
-        //mensaje_pantalla.contains(mensaje);
         assertThat(mensaje_pantalla,mensaje_pantalla.contains(mensaje));
     }
 }
