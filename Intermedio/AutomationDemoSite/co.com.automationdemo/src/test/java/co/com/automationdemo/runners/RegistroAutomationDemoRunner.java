@@ -1,9 +1,9 @@
 package co.com.automationdemo.runners;
 
-import cucumber.api.CucumberOptions;
+import io.cucumber.junit.CucumberOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
-import net.thucydides.core.util.SystemEnvironmentVariables;
+import net.thucydides.core.environment.SystemEnvironmentVariables;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
-import static co.com.automationdemo.utils.datatofeature.DataToFeature.*;
+import static co.com.automationdemo.utils.datatofeature.DataToFeature.overrideFeatureFiles;
 
 //@RunWith(RunnerPersonalizado.class)
 //@RunWith(CucumberWithSerenity.class)

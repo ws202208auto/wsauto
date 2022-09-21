@@ -12,8 +12,6 @@
     |fisrtName|lastName|address|email|phone|gender|hobbies|languages|skills|country|selectConuntry|birthYear|birthMonth|birthday|password|confirmpassword|
     |<fisrtName>|<lastName>|<address>|<email>|<phone>|<gender>|<hobbies>|<languages>|<skills>|<country>|<selectConuntry>|<birthYear>|<birthMonth>|<birthday>|<password>|<confirmpassword>|
     Entonces el verifica el mensaje
-    |mensaje|
-    |<mensaje>|
     Ejemplos:
       |fisrtName|lastName|address|email|phone|gender|hobbies|languages|skills|country|selectConuntry|birthYear|birthMonth|birthday|password|confirmpassword|
     ##@externaldata@D:/WS 202208/Intermedio/AutomationDemoSite/co.com.automationdemo/src/test/resources/datadriven/datos.xlsx@Hoja1

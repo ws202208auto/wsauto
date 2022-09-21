@@ -2,9 +2,10 @@ package co.com.automationdemo.definitions;
 
 import co.com.automationdemo.models.RegistroData;
 import co.com.automationdemo.steps.RegistroAutomationDemoSteps;
-import cucumber.api.java.es.Cuando;
-import cucumber.api.java.es.Dado;
-import cucumber.api.java.es.Entonces;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import net.thucydides.core.annotations.Steps;
 
 import java.util.List;
@@ -21,12 +22,12 @@ public class RegistroAutomationDemoDefinition {
 
 
     @Cuando("^el diligencia el formulario$")
-    public void el_diligencia_el_formulario(List<RegistroData> registroData) {
-
+    public void el_diligencia_el_formulario(DataTable dataTable) {
+        registroAutomationDemoSteps.diligenciaDatos(RegistroData.setData(dataTable));
     }
 
     @Entonces("^el verifica el mensaje$")
-    public void el_verifica_el_mensaje(List<RegistroData> registroData) {
-
+    public void el_verifica_el_mensaje() {
+        registroAutomationDemoSteps.verificarMensaje();
     }
 }

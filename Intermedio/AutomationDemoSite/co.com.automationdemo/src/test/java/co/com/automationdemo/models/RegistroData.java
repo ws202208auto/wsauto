@@ -1,5 +1,12 @@
 package co.com.automationdemo.models;
 
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
+import io.cucumber.datatable.DataTable;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class RegistroData {
     private String fisrtName;
     private String lastName;
@@ -144,5 +151,14 @@ public class RegistroData {
 
     public void setConfirmpassword(String confirmpassword) {
         this.confirmpassword = confirmpassword;
+    }
+
+    public static List<RegistroData> setData(DataTable dataTable){
+        List<RegistroData> dates= new ArrayList<>();
+        List<Map<String,String>> mapIfo = dataTable.asMaps();
+        for (Map<String, String> map: mapIfo){
+            dates.add(new ObjectMapper().convertValue(map,RegistroData.class));
+        }
+        return dates;
     }
 }

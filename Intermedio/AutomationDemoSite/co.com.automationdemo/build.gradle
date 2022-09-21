@@ -1,6 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -10,17 +11,18 @@ repositories {
 }
 buildscript {
     repositories {
-        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
-
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.2.0")
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.0"
     }
 }
 ext{
-    serenityversion = '2.0.55'
-    serenityCucumber = '1.9.39'
-    jUnit = '4.12'
+    serenityversion = '3.3.4'
+    serenityCucumber = '3.3.4'
+    jUnit = '4.13.2'
     webdrivermanager = '3.8.1'
     poi = '3.17'
 }
@@ -37,6 +39,18 @@ dependencies {
     testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.7'
 }
 
-test {
-    useJUnitPlatform()
+serenity {
+    // Specify the root package of any JUnit acceptance tests to appear in the Serenity report
+    testRoot = "starter"
+    // Specify the root directory of any Cucumber feature files
+    requirementsDir = "src/test/resources/features"
 }
+
+
+test {
+    systemProperties System.getProperties()
+    testLogging.showStandardStreams = true
+}
+
+gradle.startParameter.continueOnFailure = true
+test.finalizedBy(aggregate)
