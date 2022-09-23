@@ -6,10 +6,12 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import lombok.AllArgsConstructor;
 import net.thucydides.core.annotations.Steps;
 
 import java.util.List;
 
+@AllArgsConstructor
 public class RegistroAutomationDemoDefinition {
     @Steps
     RegistroAutomationDemoSteps registroAutomationDemoSteps;
@@ -23,7 +25,7 @@ public class RegistroAutomationDemoDefinition {
 
     @Cuando("^el diligencia el formulario$")
     public void el_diligencia_el_formulario(DataTable dataTable) {
-        registroAutomationDemoSteps.diligenciaDatos(RegistroData.setData(dataTable));
+        registroAutomationDemoSteps.diligenciaDatos(RegistroData.setData(dataTable).get(0));
     }
 
     @Entonces("^el verifica el mensaje$")

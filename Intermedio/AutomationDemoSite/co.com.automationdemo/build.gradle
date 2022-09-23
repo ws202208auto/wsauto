@@ -37,6 +37,9 @@ dependencies {
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: "$rootProject.ext.webdrivermanager"
     testImplementation group: 'junit', name: 'junit', version: "$rootProject.ext.jUnit"
     testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.7'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
 }
 
 serenity {
@@ -52,5 +55,5 @@ test {
     testLogging.showStandardStreams = true
 }
 
-gradle.startParameter.continueOnFailure = true
 test.finalizedBy(aggregate)
+gradle.startParameter.continueOnFailure = true

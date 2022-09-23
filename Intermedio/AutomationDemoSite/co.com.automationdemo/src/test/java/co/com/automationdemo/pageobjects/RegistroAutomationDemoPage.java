@@ -1,6 +1,8 @@
 package co.com.automationdemo.pageobjects;
 
 import co.com.automationdemo.models.RegistroData;
+import lombok.Data;
+import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;

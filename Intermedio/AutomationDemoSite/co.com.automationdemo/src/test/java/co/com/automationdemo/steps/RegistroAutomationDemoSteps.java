@@ -4,8 +4,6 @@ import co.com.automationdemo.models.RegistroData;
 import co.com.automationdemo.pageobjects.RegistroAutomationDemoPage;
 import net.thucydides.core.annotations.Step;
 
-import java.util.List;
-
 public class RegistroAutomationDemoSteps {
     RegistroAutomationDemoPage registroAutomationDemoPage;
 
@@ -15,8 +13,8 @@ public class RegistroAutomationDemoSteps {
     }
 
     @Step
-    public void diligenciaDatos(List<RegistroData> registroData) {
-        registroAutomationDemoPage.diligenciarPantalla(registroData.get(0));
+    public void diligenciaDatos(RegistroData registroData) {
+        registroAutomationDemoPage.diligenciarPantalla(registroData);
     }
 
     public void verificarMensaje() {
